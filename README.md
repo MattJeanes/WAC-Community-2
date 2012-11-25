@@ -12,6 +12,9 @@ Aircraft
 ===============
 In this pack you will find:
 
-• MV-22 Osprey
-• Bell OH-58D Kiowa
-• UH-1D Huey
+• Eurocopter EC-655 Tiger
+• Hughes 500D
+• MH-53 Sea Stallion
+• Mil Mi-35
+• Robinson R22
+• UH-1Y Venom
