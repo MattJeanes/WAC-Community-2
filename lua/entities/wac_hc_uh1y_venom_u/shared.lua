@@ -10,10 +10,10 @@ ENT.Contact    			= ""
 ENT.Purpose 			= ""
 ENT.Instructions 		= ""
 
-ENT.Model			= "models/Flyboi/uh1yvenom/uh1yvenom_fb.mdl"
+ENT.Model			= "models/flyboi/uh1yvenom/uh1yvenom_fb.mdl"
 ENT.RotorPhModel		= "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel		= "models/Flyboi/uh1yvenom/venomrotorm_fb.mdl"
-ENT.BackRotorModel	= "models/Flyboi/uh1yvenom/venomrotort_fb.mdl"
+ENT.RotorModel		= "models/flyboi/uh1yvenom/venomrotorm_fb.mdl"
+ENT.BackRotorModel	= "models/flyboi/uh1yvenom/venomrotort_fb.mdl"
 
 ENT.Spawnable		= true
 ENT.AdminSpawnable	= true
