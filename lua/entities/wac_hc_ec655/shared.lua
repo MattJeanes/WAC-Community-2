@@ -3,7 +3,7 @@ if not wac then return end
 ENT.Base 			= "wac_hc_base"
 ENT.Type 			= "anim"
 
-ENT.PrintName		= "Eurocopter EC-655 Tiger"
+ENT.PrintName		= "Eurocopter EC-655"
 ENT.Author			= "SentryGunMan,Nirrti"
 ENT.Category		= wac.aircraft.spawnCategory
 ENT.Contact    		= ""
