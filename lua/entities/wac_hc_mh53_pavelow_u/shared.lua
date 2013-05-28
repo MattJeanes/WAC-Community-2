@@ -21,99 +21,61 @@ ENT.AdminSpawnable	= true
 ENT.SmokePos		= Vector(10,0,175)
 ENT.FirePos		= Vector(10,0,180)
 
-function ENT:AddSeatTable()
-	return {
-		[1]={
-			Pos=Vector(256,-30,70),
-			ExitPos=Vector(250,-100,20),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[2]={
-			Pos=Vector(256,32,70),
-			ExitPos=Vector(250,100,20),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[3]={
-			Pos=Vector(81.58,-38,30),
-			Ang=Angle(0,90,0),
-			ExitPos=Vector(81.58,0,30),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[4]={
-			Pos=Vector(81.58,38,30),
-			Ang=Angle(0,-90,0),
-			ExitPos=Vector(81.58,0,30),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[5]={
-			Pos=Vector(43.72,38,30),
-			Ang=Angle(0,-90,0),
-			ExitPos=Vector(43.72,0,30),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[6]={
-			Pos=Vector(-60.01,-38,30),
-			Ang=Angle(0,90,0),
-			ExitPos=Vector(-60.01,0,30),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[7]={
-			Pos=Vector(-160.01,-38,30),
-			Ang=Angle(0,90,0),
-			ExitPos=Vector(-60.01,0,30),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[8]={
-			Pos=Vector(-160.01,38,30),
-			Ang=Angle(0,-90,0),
-			ExitPos=Vector(-160.01,0,30),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-		[9]={
-			Pos=Vector(-350,0,20),
-			Ang=Angle(0,180,0),
-			ExitPos=Vector(-340,0,20),
-			NoHud=true,
-			wep={
-				wac.aircraft.getWeapon("No Weapon"),
-			},
-		},
-	}
-end
+ENT.Seats = {
+	{
+		pos=Vector(256,-30,70),
+		exit=Vector(250,-100,20),
+	},
+	{
+		pos=Vector(256,32,70),
+		exit=Vector(250,100,20),
+	},
+	{
+		pos=Vector(81.58,-38,30),
+		ang=Angle(0,90,0),
+		exit=Vector(81.58,0,30),
+	},
+	{
+		pos=Vector(81.58,38,30),
+		ang=Angle(0,-90,0),
+		exit=Vector(81.58,0,30),
+	},
+	{
+		pos=Vector(43.72,38,30),
+		ang=Angle(0,-90,0),
+		exit=Vector(43.72,0,30),
+	},
+	{
+		pos=Vector(-60.01,-38,30),
+		ang=Angle(0,90,0),
+		exit=Vector(-60.01,0,30),
+	},
+	{
+		pos=Vector(-160.01,-38,30),
+		ang=Angle(0,90,0),
+		exit=Vector(-60.01,0,30),
+	},
+	{
+		pos=Vector(-160.01,38,30),
+		ang=Angle(0,-90,0),
+		exit=Vector(-160.01,0,30),
+	},
+	{
+		pos=Vector(-350,0,20),
+		ang=Angle(0,180,0),
+		exit=Vector(-340,0,20),
+	},
+}
 
-function ENT:AddSounds()
-	self.Sound={
-		Start=CreateSound(self.Entity,"WAC/pavelow/start.wav"),
-		Blades=CreateSound(self.Entity,"MH53.External"),
-		Engine=CreateSound(self.Entity,"MH53.Internal"),
-		MissileAlert=CreateSound(self.Entity,"HelicopterVehicle/MissileNearby.mp3"),
-		MissileShoot=CreateSound(self.Entity,"HelicopterVehicle/MissileShoot.mp3"),
-		MinorAlarm=CreateSound(self.Entity,"HelicopterVehicle/MinorAlarm.mp3"),
-		LowHealth=CreateSound(self.Entity,"HelicopterVehicle/LowHealth.mp3"),
-		CrashAlarm=CreateSound(self.Entity,"HelicopterVehicle/CrashAlarm.mp3"),
-	}
-end
+ENT.Sounds = {
+	Start="WAC/pavelow/start.wav",
+	Blades="WAC/pavelow/external.wav",
+	Engine="WAC/pavelow/internal.wav",
+	MissileAlert="HelicopterVehicle/MissileNearby.mp3",
+	MissileShoot="HelicopterVehicle/MissileShoot.mp3",
+	MinorAlarm="HelicopterVehicle/MinorAlarm.mp3",
+	LowHealth="HelicopterVehicle/LowHealth.mp3",
+	CrashAlarm="HelicopterVehicle/CrashAlarm.mp3",
+}
+
+function ENT:DrawWeaponSelection() end

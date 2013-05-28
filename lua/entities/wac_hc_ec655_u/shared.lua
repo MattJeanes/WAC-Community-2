@@ -24,57 +24,99 @@ ENT.BackRotorDir	= -1
 ENT.SmokePos		= Vector(0,0,145)
 ENT.FirePos			= Vector(0,0,145)
 
-function ENT:AddSeatTable()
-		return{
-		[1]={
-			Pos=Vector(42.5,0,68),
-			ExitPos=Vector(50,-70,0),
-			wep={
-				wac.aircraft.getWeapon("Hydra 70",{
-					Name="SNEB",
-					Ammo=24,
-					MaxAmmo=24,
-					Damage=70,
-					ShootDelay=0.2,
-					ShootPos={
-						Vector(3.22,85,45),
-						Vector(3.22,-85,45),
-					}
-				})
+ENT.Seats = {
+	{
+		pos=Vector(42.5,0,68),
+		exit=Vector(50,-70,0),
+		weapons={"SNEB"},
+	},
+	{
+		pos=Vector(105, 0, 50),
+		exit=Vector(105,-70,0),
+		weapons={"2A42","Hellfire"},
+	},
+}
+
+ENT.Weapons = {
+	["SNEB"] = {
+		class = "wac_pod_hydra",
+		info = {
+			Sequential = true,
+			Pods = {
+				Vector(3.22,85,45),
+				Vector(3.22,-85,45)
+			}
+		},
+	},
+	["Hellfire"] = {
+		class = "wac_pod_hydra",
+		info = {
+			Sequential = true,
+			Pods = {
+				Vector(3.22,58,55),
+				Vector(3.22,-58,55)
 			},
 		},
-		[2]={
-			Pos=Vector(105, 0, 50),
-			ExitPos=Vector(105,-70,0),
-			wep={
-				[1]=wac.aircraft.getWeapon("No Weapon"),
-				[2]=wac.aircraft.getWeapon("M197",{Name="GIAT 30",Ammo=450,MaxAmmo="450"}),
-				[3]=wac.aircraft.getWeapon("Hellfire",{
-				Name="AGM-114 Hellfire",
-				Ammo=8,
-				MaxAmmo=8,
-				ShootPos={
-						Vector(3.22,58,55),
-						Vector(3.22,-58,55)},
-							}),
+	},
+	["2A42"] = {
+		class = "wac_pod_aimedgun",
+		info = {
+			ShootPos = Vector(177,0,27),
+			ShootOffset = Vector(55,0,0),
+			FireRate = 300,
+			Sounds = {
+				spin = "",
+				shoot1p = "WAC/cannon/havoc_cannon_1p.wav",
+				shoot3p = "WAC/cannon/havoc_cannon_3p.wav"
+			}
+		}
+	},
+}
 
+ENT.WeaponAttachments = {
 
-			},
-		},
-	}
+	gunMount1 = {
+		model = "models/sentry/tiger_gun1.mdl",
+		pos = Vector(177,0,27),
+	},
+	
+	gunMount2 = {
+		model = "models/sentry/tiger_gun2.mdl",
+		pos = Vector(177,0,27),
+		localTo = "gunMount1",
+	},
+	
+	gun = {
+		model = "models/BF2/helicopters/AH-1 Cobra/ah1z_g.mdl",
+		pos = Vector(-5,0,0),
+		localTo = "gunMount2",
+	},
+	
+	radar1 = {
+		model = "models/sentry/apachecam.mdl",
+		pos = Vector(213,0,12),
+	},
+	
+}
 
-end
+ENT.Camera = {
+	model = "models/BF2/helicopters/AH-1 Cobra/ah1z_radar1.mdl",
+	pos = Vector(200,0,0),
+	offset = Vector(-1,0,0),
+	viewPos = Vector(2, 0, 3.5),
+	maxAng = Angle(45, 90, 0),
+	minAng = Angle(-2, -90, 0),
+	seat = 2
+}
 			
 
-function ENT:AddSounds()
-	self.Sound={
-		Start=CreateSound(self.Entity,"WAC/tiger/start.wav"),
-		Blades=CreateSound(self.Entity,"Tiger.External"),
-		Engine=CreateSound(self.Entity,"Tiger.Internal"),
-		MissileAlert=CreateSound(self.Entity,"HelicopterVehicle/MissileNearby.mp3"),
-		MissileShoot=CreateSound(self.Entity,"HelicopterVehicle/MissileShoot.mp3"),
-		MinorAlarm=CreateSound(self.Entity,"WAC/Heli/fire_alarm_tank.wav"),
-		LowHealth=CreateSound(self.Entity,"WAC/Heli/fire_alarm.wav"),
-		CrashAlarm=CreateSound(self.Entity,"WAC/Heli/FireSmoke.wav"),
-	}
-end
+ENT.Sounds={
+	Start="WAC/tiger/start.wav",
+	Blades="wac/tiger/external.wav",
+	Engine="wac/tiger/internal.wav",
+	MissileAlert="HelicopterVehicle/MissileNearby.mp3",
+	MissileShoot="HelicopterVehicle/MissileShoot.mp3",
+	MinorAlarm="WAC/Heli/fire_alarm_tank.wav",
+	LowHealth="WAC/Heli/fire_alarm.wav",
+	CrashAlarm="WAC/Heli/FireSmoke.wav",
+}

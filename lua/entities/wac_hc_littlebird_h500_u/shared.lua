@@ -1,5 +1,5 @@
 if not wac then return end
-
+	
 ENT.Base 				= "wac_hc_base_u"
 ENT.Type 				= "anim"
 
@@ -26,44 +26,33 @@ ENT.SeatSwitcherPos	= Vector(0,0,0)
 ENT.SmokePos		= Vector(-70,0,-12)
 ENT.FirePos		= Vector(0,0,46)
 
-function ENT:AddSeatTable()
-	return{
-		[1]={
-			Pos=Vector(28, 14.5, -14),
-			ExitPos=Vector(28,70,-56),
-			NoHud=true,
-			wep={wac.aircraft.getWeapon("No Weapon")},
-		},
-		[2]={
-			Pos=Vector(28, -14.5, -14),
-			ExitPos=Vector(28,-70,-56),
-			NoHud=true,
-			wep={wac.aircraft.getWeapon("No Weapon")},
-		},
-		[3]={
-			Pos=Vector(-8, -11, -17),
-			ExitPos=Vector(-10,-70,-56),
-			NoHud=true,
-			wep={wac.aircraft.getWeapon("No Weapon")},
-		},
-		[4]={
-			Pos=Vector(-8, 11, -17),
-			ExitPos=Vector(-10,70,-56),
-			NoHud=true,
-			wep={wac.aircraft.getWeapon("No Weapon")},
-		},
-	}
-end
+ENT.Seats = {
+	{
+		pos=Vector(28, 14.5, -14),
+		exit=Vector(28,70,-56),
+	},
+	{
+		pos=Vector(28, -14.5, -14),
+		exit=Vector(28,-70,-56),
+	},
+	{
+		pos=Vector(-8, -11, -17),
+		exit=Vector(-10,-70,-56),
+	},
+	{
+		pos=Vector(-8, 11, -17),
+		exit=Vector(-10,70,-56),
+	},
+}
 
-function ENT:AddSounds()
-	self.Sound={
-		Start=CreateSound(self.Entity,"WAC/Heli/h6_start.wav"),
-		Blades=CreateSound(self.Entity,"H500.External"),
-		Engine=CreateSound(self.Entity,"H500.Internal"),
-		MissileAlert=CreateSound(self.Entity,"HelicopterVehicle/MissileNearby.mp3"),
-		MissileShoot=CreateSound(self.Entity,"HelicopterVehicle/MissileShoot.mp3"),
-		MinorAlarm=CreateSound(self.Entity,"HelicopterVehicle/MinorAlarm.mp3"),
-		LowHealth=CreateSound(self.Entity,"HelicopterVehicle/LowHealth.mp3"),
-		CrashAlarm=CreateSound(self.Entity,"HelicopterVehicle/CrashAlarm.mp3"),
-	}
-end
+
+ENT.Sounds={
+	Start="WAC/Heli/h6_start.wav",
+	Blades="WAC/Heli/heli_loop_ext.wav",
+	Engine="WAC/Heli/heli_loop_int.wav",
+	MissileAlert="HelicopterVehicle/MissileNearby.mp3",
+	MissileShoot="HelicopterVehicle/MissileShoot.mp3",
+	MinorAlarm="HelicopterVehicle/MinorAlarm.mp3",
+	LowHealth="HelicopterVehicle/LowHealth.mp3",
+	CrashAlarm="HelicopterVehicle/CrashAlarm.mp3",
+}

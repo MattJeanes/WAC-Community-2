@@ -14,7 +14,7 @@ ENT.BrakeMul		= 1
 ENT.AngBrakeMul	= 0.015
 ENT.Weight			= 46000
 
-ENT.WheelInfo={
+ENT.Wheels={
 	{
 		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
 		pos=Vector(278,-8,-12),
@@ -60,11 +60,10 @@ function ENT:SpawnFunction(ply, tr)
 	ent.Owner=ply
 	ent:Spawn()
 	ent:Activate()
-	self.Sounds=table.Copy(sndt)
 	return ent
 end
 
-function ENT:AddStuff()
+function ENT:addStuff()
 	local e1=ents.Create("prop_physics")
 	e1:SetModel("models/bf2/helicopters/MH-53J Pave Low IIIE/mh-53j_gear.mdl")
 	e1:SetPos(self:LocalToWorld(Vector(278,0,25)))
@@ -72,14 +71,14 @@ function ENT:AddStuff()
 	e1:SetParent(self)
 	self:AddOnRemove(e1)
 
-local e2=ents.Create("prop_physics")
+	local e2=ents.Create("prop_physics")
 	e2:SetModel("models/bf2/helicopters/MH-53J Pave Low IIIE/mh-53j_gear.mdl")
 	e2:SetPos(self:LocalToWorld(Vector(-56,80,25)))
 	e2:Spawn()
 	e2:SetParent(self)
 	self:AddOnRemove(e2)
 
-local e3=ents.Create("prop_physics")
+	local e3=ents.Create("prop_physics")
 	e3:SetModel("models/bf2/helicopters/MH-53J Pave Low IIIE/mh-53j_gear.mdl")
 	e3:SetPos(self:LocalToWorld(Vector(-56,-80,25)))
 	e3:Spawn()

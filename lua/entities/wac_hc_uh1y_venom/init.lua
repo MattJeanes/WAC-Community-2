@@ -24,6 +24,5 @@ function ENT:SpawnFunction(ply, tr)
 	ent.Owner=ply
 	ent:Spawn()
 	ent:Activate()
-	self.Sounds=table.Copy(sndt)
 	return ent
 end
