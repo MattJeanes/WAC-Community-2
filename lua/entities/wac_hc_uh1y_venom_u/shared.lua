@@ -53,22 +53,16 @@ ENT.Seats = {
 }
 
 ENT.Weapons = {
-	profiles = {
-		["Hydra 70"] = {
-			pods = {1, 2},
-			sequential = true,
-		},
-	},
-	pods = {
-		{
-			class = "wac_pod_hydra",
-			pos = Vector(40.25,60,32.93),
-		},
-		{
-			class = "wac_pod_hydra",
-			pos = Vector(40.25,-60,32.93),
-		},
-	},
+	["Hydra 70"] = {
+		class = "wac_pod_hydra",
+		info = {
+			Pods = {
+				Vector(40.25,60,32.93),
+				Vector(40.25,-60,32.93),
+				Sequential = true,
+			},
+		}
+	}
 }
 
 

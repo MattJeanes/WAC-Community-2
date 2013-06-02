@@ -87,24 +87,13 @@ ENT.WeaponAttachments = {
 		localTo = "gunMount1",
 	},
 	
-	gun = {
-		model = "models/sentry/mi-35_barrel.mdl",
-		pos = Vector(20,0,0),
-		localTo = "gunMount2",
-	},
-	
-	radar1 = {
-		model = "models/sentry/apachecam.mdl",
-		pos = Vector(190,18,10),
-	},
-	
 }
 
 ENT.Camera = {
-	model = "models/BF2/helicopters/AH-1 Cobra/ah1z_radar1.mdl",
-	pos = Vector(200,0,0),
+	model = "models/props_junk/PopCan01a.mdl",
+	pos = Vector(220,0,50),
 	offset = Vector(-1,0,0),
-	viewPos = Vector(2, 0, 3.5),
+	viewPos = Vector(20, 0, 0),
 	maxAng = Angle(45, 90, 0),
 	minAng = Angle(-2, -90, 0),
 	seat = 2
