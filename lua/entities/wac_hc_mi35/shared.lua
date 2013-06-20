@@ -2,27 +2,27 @@ if not wac then return end
 
 ENT.Base 			= "wac_hc_base"
 ENT.Type 			= "anim"
-
 ENT.PrintName		= "Mil Mi-35"
 ENT.Author			= "SentryGunMan,Nirrti"
 ENT.Category		= wac.aircraft.spawnCategory
-ENT.Contact    		= ""
-ENT.Purpose 		= ""
-ENT.Instructions 	= ""
-ENT.Model			= "models/sentry/mi-35.mdl"
-ENT.RotorPhModel	= "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel		= "models/sentry/mi-35_tr.mdl"
-ENT.BackRotorModel	= "models/sentry/mi-35_rr.mdl"
-
 ENT.Spawnable		= true
 ENT.AdminSpawnable	= true
 
-ENT.TopRotorPos		= Vector(-7.5,0,160)
-ENT.TopRotorDir		= -1
-ENT.BackRotorPos	= Vector(-415.5,25,174.5)
-ENT.BackRotorDir	= -1
+ENT.Model			= "models/sentry/mi-35.mdl"
 ENT.SmokePos		= Vector(-7.5,0,155)
 ENT.FirePos			= Vector(-7.5,0,155)
+
+ENT.TopRotor = {
+	dir = -1,
+	pos = Vector(-7.5,0,160),
+	model = "models/sentry/mi-35_tr.mdl"
+}
+
+ENT.BackRotor = {
+	dir = -1,
+	pos = Vector(-415.5,25,174.5),
+	model = "models/sentry/mi-35_rr.mdl"
+}
 
 ENT.Seats = {
 	{
@@ -50,7 +50,7 @@ ENT.Weapons = {
 		},
 	},
 	["9M17 Phalanga"] = {
-		class = "wac_pod_hydra",
+		class = "wac_pod_hellfire",
 		info = {
 			Sequential = true,
 			Pods = {

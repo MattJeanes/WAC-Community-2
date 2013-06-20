@@ -2,28 +2,29 @@ if not wac then return end
 
 ENT.Base 				= "wac_hc_base"
 ENT.Type 				= "anim"
-
 ENT.PrintName			= "Robinson R22"
 ENT.Author				= "Dr. Matt"
 ENT.Category			= wac.aircraft.spawnCategory
-ENT.Contact    			= ""
-ENT.Purpose 			= ""
-ENT.Instructions 		= ""
 ENT.Spawnable			= true
 ENT.AdminSpawnable	= true
 
 ENT.Model            = "models/r22/r22bodi.mdl"
-ENT.RotorPhModel        = "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel        = "models/r22/r22main2.mdl"
-ENT.BackRotorModel    = "models/r22/r22side2.mdl"
-ENT.BackRotorDir        = -1
-ENT.TopRotorPos        = Vector(-18,0,110)
-ENT.BackRotorPos        = Vector(-214,7,75)
-ENT.RotorWidth		= 180
 ENT.EngineForce        = 22
 ENT.Weight            = 635
 ENT.SmokePos        = Vector(-70,0,48)
 ENT.FirePos            = Vector(-75,0,48)
+
+ENT.TopRotor = {
+	dir = -1,
+	pos = Vector(-18,0,110),
+	model = "models/r22/r22main2.mdl"
+}
+
+ENT.BackRotor = {
+	dir = -1,
+	pos = Vector(-214,7,75),
+	model = "models/r22/r22side2.mdl"
+}
 
 ENT.Seats = {
 	{

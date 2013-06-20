@@ -2,27 +2,27 @@ if not wac then return end
 
 ENT.Base 			= "wac_hc_base"
 ENT.Type 			= "anim"
-
 ENT.PrintName		= "Eurocopter EC-655"
 ENT.Author			= "SentryGunMan,Nirrti"
 ENT.Category		= wac.aircraft.spawnCategory
-ENT.Contact    		= ""
-ENT.Purpose 		= ""
-ENT.Instructions 	= ""
-ENT.Model			= "models/sentry/tiger.mdl"
-ENT.RotorPhModel	= "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel		= "models/sentry/tiger_tr.mdl"
-ENT.BackRotorModel	= "models/sentry/tiger_rr.mdl"
-
 ENT.Spawnable		= true
 ENT.AdminSpawnable	= true
 
-ENT.TopRotorPos		= Vector(0,0,145)
-ENT.TopRotorDir		= -1
-ENT.BackRotorPos	= Vector(-315.5,0,117)
-ENT.BackRotorDir	= -1
+ENT.Model			= "models/sentry/tiger.mdl"
 ENT.SmokePos		= Vector(0,0,145)
 ENT.FirePos			= Vector(0,0,145)
+
+ENT.TopRotor = {
+	dir = -1,
+	pos = Vector(0,0,145),
+	model = "models/sentry/tiger_tr.mdl"
+}
+
+ENT.BackRotor = {
+	dir = -1,
+	pos = Vector(-315.5,0,117),
+	model = "models/sentry/tiger_rr.mdl"
+}
 
 ENT.Seats = {
 	{
@@ -49,7 +49,7 @@ ENT.Weapons = {
 		},
 	},
 	["Hellfire"] = {
-		class = "wac_pod_hydra",
+		class = "wac_pod_hellfire",
 		info = {
 			Sequential = true,
 			Pods = {

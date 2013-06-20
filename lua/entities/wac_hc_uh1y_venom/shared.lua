@@ -2,23 +2,28 @@ if not wac then return end
 
 ENT.Base 				= "wac_hc_base"
 ENT.Type 				= "anim"
-
 ENT.PrintName			= "UH-1Y Venom"
 ENT.Author				= "}{ornet/Vest"
 ENT.Category			= wac.aircraft.spawnCategory
-ENT.Contact    			= ""
-ENT.Purpose 			= ""
-ENT.Instructions 		= ""
-
-ENT.Model			= "models/flyboi/uh1yvenom/uh1yvenom_fb.mdl"
-ENT.RotorPhModel		= "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel		= "models/flyboi/uh1yvenom/venomrotorm_fb.mdl"
-ENT.BackRotorModel	= "models/flyboi/uh1yvenom/venomrotort_fb.mdl"
-
 ENT.Spawnable		= true
 ENT.AdminSpawnable	= true
+
+ENT.Model			= "models/flyboi/uh1yvenom/uh1yvenom_fb.mdl"
 ENT.SmokePos		= Vector(-65,0,80)
 ENT.FirePos			= Vector(-25,0,130)
+
+ENT.TopRotor = {
+	dir = -1,
+	pos = Vector(-6.2,-1.5,138),
+	model = "models/flyboi/uh1yvenom/venomrotorm_fb.mdl"
+}
+
+ENT.BackRotor = {
+	dir = -1,
+	pos = Vector(-357.5,5.5,134),
+	model = "models/flyboi/uh1yvenom/venomrotort_fb.mdl"
+}
+
 
 ENT.Seats = {
 	{

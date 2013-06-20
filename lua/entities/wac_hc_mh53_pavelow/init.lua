@@ -4,14 +4,8 @@ AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 
 ENT.RotorWidth		= 480
-ENT.TopRotorDir	= 1
-ENT.BackRotorDir	= -1
-ENT.TopRotorPos	= Vector(0,0,168.5)
-ENT.BackRotorPos	= Vector(-691,22,236)
-ENT.MaxEnterDistance= 100
-ENT.EngineForce	= 40
-ENT.BrakeMul		= 1
-ENT.AngBrakeMul	= 0.015
+ENT.MaxEnterDistance	= 100
+ENT.EngineForce		= 40
 ENT.Weight			= 46000
 
 ENT.Wheels={

@@ -2,24 +2,27 @@ if not wac then return end
 
 ENT.Base 				= "wac_hc_base"
 ENT.Type 				= "anim"
-
 ENT.PrintName			= "MH-53 Sea Stallion"
 ENT.Author				= "WeltEnSTurm"
 ENT.Category			= wac.aircraft.spawnCategory
-ENT.Contact    			= ""
-ENT.Purpose 			= ""
-ENT.Instructions 		= ""
-
-ENT.Model			= "models/bf2/helicopters/MH-53J Pave Low IIIE/mh53_b.mdl"
-ENT.RotorPhModel	= "models/props_junk/sawblade001a.mdl"
-ENT.RotorModel		= "models/bf2/helicopters/MH-53J Pave Low IIIE/mh53_r.mdl"
-ENT.BackRotorModel= "models/bf2/helicopters/mh-53j pave low iiie/mh53_tr.mdl"
-
 ENT.Spawnable			= true
 ENT.AdminSpawnable	= true
 
+ENT.Model			= "models/bf2/helicopters/MH-53J Pave Low IIIE/mh53_b.mdl"
 ENT.SmokePos		= Vector(10,0,175)
 ENT.FirePos		= Vector(10,0,180)
+
+ENT.TopRotor = {
+	dir = -1,
+	pos = Vector(0,0,168.5),
+	model = "models/bf2/helicopters/MH-53J Pave Low IIIE/mh53_r.mdl"
+}
+
+ENT.BackRotor = {
+	dir = -1,
+	pos = Vector(-691,22,236),
+	model = "models/bf2/helicopters/mh-53j pave low iiie/mh53_tr.mdl"
+}
 
 ENT.Seats = {
 	{
