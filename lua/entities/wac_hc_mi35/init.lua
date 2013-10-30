@@ -6,13 +6,13 @@ ENT.WheelStabilize	=-150
 
 ENT.Wheels = {
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(-46,65,10),
 		friction=100,
 		mass=350,
 	},
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(-46,-65,10),
 		friction=100,
 		mass=350,

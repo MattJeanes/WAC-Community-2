@@ -90,9 +90,9 @@ ENT.WeaponAttachments = {
 
 ENT.Camera = {
 	model = "models/props_junk/PopCan01a.mdl",
-	pos = Vector(170,0,50),
+	pos = Vector(170,0,25),
 	offset = Vector(-1,0,0),
-	viewPos = Vector(30, 0, 0),
+	viewPos = Vector(30, 0, -10),
 	maxAng = Angle(45, 90, 0),
 	minAng = Angle(-2, -90, 0),
 	seat = 2

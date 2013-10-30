@@ -2,34 +2,29 @@
 include("shared.lua")
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
-ENT.WheelStabilize	=-150
 
 ENT.Wheels={
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(58,45,10),
 		friction=100,
 		mass=250,
 	},
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(58,-45,10),
 		friction=100,
-		mass=250
+		mass=250,
 	},
 	{
 		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w2.mdl",
 		pos=Vector(-244,0,5),
 		friction=100,
-		mass=250
+		mass=250,
 	},
 }
 
-ENT.EngineForce			= 50
 ENT.Weight				= 13000
-ENT.MaxEnterDistance	= 100
-ENT.RotorWidth	= 42
-
 
 function ENT:SpawnFunction(ply, tr)
 	if (!tr.Hit) then return end

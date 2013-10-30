@@ -10,37 +10,37 @@ ENT.Weight			= 46000
 
 ENT.Wheels={
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(278,-8,-12),
 		friction=100,
 		mass=400,
 	},
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(278,8,-12),
 		friction=100,
 		mass=400,
 	},
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(-56,-88,-12),
 		friction=100,
 		mass=400,
 	},
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(-56,88,-12),
 		friction=100,
 		mass=400,
 	},
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(-56,-72,-12),
 		friction=100,
 		mass=400,
 	},
 	{
-		mdl="models/BF2/helicopters/Mil Mi-28/mil mi-28_wheel.mdl",
+		mdl="models/BF2/helicopters/Mil Mi-28/mi28_w1.mdl",
 		pos=Vector(-56,72,-12),
 		friction=100,
 		mass=400,
